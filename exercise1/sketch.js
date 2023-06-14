@@ -2,11 +2,12 @@ let glass = [];
 var clicks = 0;
 
 function preload() {
-    bg = loadImage("assets/wavysand.jpg");
+    bg = loadImage("assets/sandy.jpg");
+    font = loadFont("assets/LexendDeca-VariableFont_wght.ttf");
 }
 
 function setup() {
-    createCanvas(1200, 800);
+    createCanvas(windowWidth, windowHeight);
 
     for (let i = 0; i < 10; i++) {
         let x = random(width);
@@ -26,18 +27,20 @@ function mousePressed() {
     }
 }
 
-
-
-
 function draw() {
     background(bg);
+
+    textSize(70);
+    fill(14, 110, 77);
+    textFont(font);
+    text("Sea Glass Collecting", 50, 100);
 
     for (let i = 0; i < glass.length; i++) {
         glass[i].show();
     }
 
     textSize(50);
-    fill(255);
+    fill(137, 250, 211);
     text("my pocket = " + clicks, width - 400, height - 50);
 }
 
