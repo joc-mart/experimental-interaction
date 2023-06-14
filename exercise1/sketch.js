@@ -16,9 +16,6 @@ function setup() {
         let g = new Seaglass (x, y, w, h);
         glass.push(g);
     }
-    
-    // var button = createButton("reset");
-    // button.mousePressed(reset());
 }
 
 function mousePressed() {
@@ -26,9 +23,6 @@ function mousePressed() {
         if (glass[i].clicked(mouseX, mouseY)){
             clicks++;
         }
-        // if clicks(i = 10) {
-        //     reset();
-        // }
     }
 }
 
