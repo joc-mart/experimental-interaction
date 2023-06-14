@@ -11,11 +11,14 @@ function setup() {
     for (let i = 0; i < 10; i++) {
         let x = random(width);
         let y = random(height);
-        let w = random(10, 60);
+        let w = random(10, 100);
         let h = (30);
         let g = new Seaglass (x, y, w, h);
         glass.push(g);
     }
+    
+    // var button = createButton("reset");
+    // button.mousePressed(reset());
 }
 
 function mousePressed() {
@@ -23,8 +26,14 @@ function mousePressed() {
         if (glass[i].clicked(mouseX, mouseY)){
             clicks++;
         }
+        // if clicks(i = 10) {
+        //     reset();
+        // }
     }
 }
+
+
+
 
 function draw() {
     background(bg);
@@ -39,18 +48,20 @@ function draw() {
 }
 
 class Seaglass {
+    
     constructor(x, y, w, h) {
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
-        this.color = color(137, 250, 211, 150);
+        let colors = [color(137, 250, 211, 150), color(229, 145, 250, 150), color(76, 240, 50, 150), color(54, 141, 255, 150)];
+        this.color = random(colors);
     }
 
     clicked(px, py) {
         let d = dist(px, py, this.x, this.y);
         if (d < this.w) {
-            this.color = 255, 255, 255;
+            this.color = color(0, 0, 0, 0);
             clicks++;
         }
     }
