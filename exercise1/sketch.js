@@ -3,7 +3,8 @@ var clicks = 0;
 
 function preload() {
     bg = loadImage("assets/sandy.jpg");
-    font = loadFont("assets/LexendDeca-VariableFont_wght.ttf");
+    fontRegular = loadFont("assets/LexendDeca-VariableFont_wght.ttf");
+    fontDisplay = loadFont("assets/BagelFatOne-Regular.ttf");
 }
 
 function setup() {
@@ -32,8 +33,8 @@ function draw() {
 
     textSize(70);
     fill(14, 110, 77);
-    textFont(font);
-    text("Sea Glass Collecting", 50, 100);
+    textFont(fontDisplay);
+    text("Seaglass Collecting", 50, 100);
 
     for (let i = 0; i < glass.length; i++) {
         glass[i].show();
