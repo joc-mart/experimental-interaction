@@ -52,7 +52,7 @@ class Seaglass {
         this.y = y;
         this.w = w;
         this.h = h;
-        let colors = [color(137, 250, 211, 150), color(229, 145, 250, 150), color(76, 240, 50, 150), color(54, 141, 255, 150)];
+        let colors = [color(137, 250, 211, 150), color(229, 145, 250, 150), color(76, 240, 50, 150), color(54, 141, 255, 150), color(14, 110, 77, 150)];
         this.color = random(colors);
     }
 
