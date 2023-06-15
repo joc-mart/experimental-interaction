@@ -13,8 +13,8 @@ function setup() {
     for (let i = 0; i < 10; i++) {
         let x = random(width);
         let y = random(height);
-        let w = random(10, 100);
-        let h = (30);
+        let w = random(30, 100);
+        let h = random(20, 50);
         let g = new Seaglass (x, y, w, h);
         glass.push(g);
     }
