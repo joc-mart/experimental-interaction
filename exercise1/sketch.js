@@ -3,7 +3,6 @@ var clicks = 0;
 
 function preload() {
     bg = loadImage("assets/sandy.jpg");
-    fontRegular = loadFont("assets/LexendDeca-VariableFont_wght.ttf");
     fontDisplay = loadFont("assets/BagelFatOne-Regular.ttf");
 }
 
