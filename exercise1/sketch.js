@@ -8,7 +8,12 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
+    resetSketch();
 
+}
+
+function resetSketch() {
+    clicks = 0;
     for (let i = 0; i < 10; i++) {
         let x = random(width);
         let y = random(height);
@@ -37,6 +42,11 @@ function draw() {
 
     for (let i = 0; i < glass.length; i++) {
         glass[i].show();
+    }
+
+    // have the function run again when the clicks variable == 10 //
+    if (clicks == 10) {
+        resetSketch();
     }
 
     textSize(50);
