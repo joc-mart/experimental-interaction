@@ -9,7 +9,6 @@ function preload() {
 function setup() {
     createCanvas(windowWidth, windowHeight);
     resetSketch();
-
 }
 
 function resetSketch() {
@@ -43,8 +42,6 @@ function draw() {
     for (let i = 0; i < glass.length; i++) {
         glass[i].show();
     }
-
-    // have the function run again when the clicks variable == 10 //
     if (clicks == 10) {
         resetSketch();
     }
@@ -79,3 +76,6 @@ class Seaglass {
         ellipse(this.x, this.y, this.w, this.h);
     }
 }
+
+// references: The Coding Train https://www.youtube.com/watch?v=lm8Y8TD4CTM, https://www.youtube.com/watch?v=TaN5At5RWH8 //
+
